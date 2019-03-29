@@ -36,9 +36,9 @@ object App {
   }
 
   def sizeTR(l: List[Int]):Int = {
-    def size(n:Int, l: List[Int]):Int = (n,l) match {
-        case (p, Nil) => 0
-        case (k, h::tail) => size(k+1, tail)
+    def size(n:Int, l: List[Int]):Int = l match {
+        case Nil => 0
+        case h::tail => size(n+1, tail)
       }
     size(0,l)
   }
