@@ -43,9 +43,9 @@ object App {
     size(0,l)
   }
 
-  def sizeNative(l: List[Int]):Int = l.foldLeft(0){ (c,_) => c+1 }
+  def sizeNative(l: List[Int]):Int = l.length
   
-  def sizeF(l: List[Int]): Int = ???
+  def sizeF(l: List[Int]): Int = l.foldLeft(0){ (c,_) => c+1 }
   
   def reverse(l: List[Int]): List[Int] = ???
   
