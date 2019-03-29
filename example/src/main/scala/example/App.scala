@@ -37,13 +37,13 @@ object App {
 
   def sizeTR(l: List[Int]):Int = {
     def size(n:Int, l: List[Int]):Int = l match {
-        case Nil => 0
+        case Nil => n
         case h::tail => size(n+1, tail)
       }
     size(0,l)
   }
 
-  def sizeNative(l: List[Int]):Int = l.length
+  def sizeNative(l: List[Int]):Int = l.foldLeft(0){ (c,_) => c+1 }
   
   def sizeF(l: List[Int]): Int = ???
   
