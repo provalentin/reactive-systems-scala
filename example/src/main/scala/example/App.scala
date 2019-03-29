@@ -53,6 +53,6 @@ object App {
   
   def reverseTR(l: List[Int]): List[Int] = ???
   
-  def reverseR(l: List[Int]): List[Int] = ???
+  def reverseF(l: List[Int]): List[Int] = ???
   
 }
