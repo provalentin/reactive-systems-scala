@@ -37,6 +37,21 @@ import org.scalatest.junit.JUnitRunner
   test("P04: Find the number elements of a list: Tail Recursive Method"){
     assert(sizeTR(List(1, 1, 2, 3, 5, 8)) == 6)
   }
+   
+  test("P04: Find the number elements of a list: Functional Style"){
+    assert(sizeF(List(1, 1, 2, 3, 5, 8)) == 6)
+  }
 
+  test("P05: Reverse list: Native"){
+    assert(reverse(List(1, 1, 2, 3, 5, 8))==List(8, 5, 3, 2, 1, 1))
+  }
 
+  test("P05: Reverse list: Recursive"){
+    assert(reverseR(List(1, 1, 2, 3, 5, 8))==List(8, 5, 3, 2, 1, 1)) 
+  }
+  
+  test("P05: Reverse list: TailRec"){
+    assert(reverseTR(List(1, 1, 2, 3, 5, 8))==List(8, 5, 3, 2, 1, 1)) 
+  } 
+   
 }
