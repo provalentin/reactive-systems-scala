@@ -30,10 +30,17 @@ object App {
   }
 
   //P04 (*) Find the number of elements of a list.
-  def size(n: Int, l: List[Integer]):Int = (n, l) match {
-    case (0, h::tail) => h
-    case(k, h::tail) => kEl(k+1,tail)
-    case(_, Nil) => throw new NoSuchElementException
+  def sizeR(l: List[Integer]):Int = l match {
+    case (Nil) => 0
+    case (h::tail) =>1 + sizeR(tail)
+  }
+
+  def sizeTR(l: List[Integer]):Int = {
+    def size(n:Int, l: List[Integer]):Int = (n,l) match {
+        case (p, Nil) => 0
+        case (k, h::tail) => size(k+1, tail)
+      }
+    size(0,l)
   }
 
   def sizeNative(l: List[Integer]):Int = l.length

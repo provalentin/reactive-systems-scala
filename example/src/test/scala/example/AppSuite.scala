@@ -29,5 +29,14 @@ import org.scalatest.junit.JUnitRunner
     assert(sizeNative(List(1, 1, 2, 3, 5, 8)) == 6)
   }
 
+  //Find the number of elements of a list
+  test("P04: Find the number elements of a list: Recursive Method"){
+    assert(sizeR(List(1, 1, 2, 3, 5, 8)) == 6)
+  }
+  //Find the number of elements of a list
+  test("P04: Find the number elements of a list: Tail Recursive Method"){
+    assert(sizeTR(List(1, 1, 2, 3, 5, 8)) == 6)
+  }
+
 
 }
