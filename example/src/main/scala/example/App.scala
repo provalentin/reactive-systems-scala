@@ -76,9 +76,18 @@ object App {
     case h :: tail => h :: compress(tail.dropWhile(_ == h))
   }
 
-  def compressTR[A](l: List[A]):List[A] = ???
+  def compressTR[A](l: List[A]):List[A] = {
+    def compress[A](result: List[A], ls: List[A]):List[A] = ls match {
+      case Nil => result.reverse
+      case h :: tail => compress(h::result, tail.dropWhile(_ == h))
+    }
+    compress(List[A](), l)
+  }
 
-  def compressF[A](l: List[A]):List[A] = ???
+  def compressF[A](ls: List[A]):List[A] = ls.foldRight(List[A]()) { (h, r) =>
+      if (r.isEmpty || r.head != h) h :: r
+      else r
+    }
 
 
 	
