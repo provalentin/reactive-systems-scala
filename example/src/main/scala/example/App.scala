@@ -47,12 +47,40 @@ object App {
   
   def sizeF(l: List[Int]): Int = l.foldLeft(0){ (c,_) => c+1 }
   
-  def reverse(l: List[Int]): List[Int] = ???
+  def reverse(l: List[Int]): List[Int] = l.reverse
   
-  def reverseR(l: List[Int]): List[Int] = ???
+  def reverseR(l: List[Int]): List[Int] = l match {
+    case Nil => Nil
+    case (h :: tail) => reverseR(tail) ::: List(h)
+ }
   
-  def reverseTR(l: List[Int]): List[Int] = ???
+  def reverseTR(l: List[Int]): List[Int] = {
+    def reverse(result: List[Int], list: List[Int]): List[Int] = list match {
+      case Nil => result
+      case (h :: tail) => reverse(h :: result, tail)
+    }
+    reverse(Nil, l)
+  }
   
-  def reverseF(l: List[Int]): List[Int] = ???
+  def reverseF(l: List[Int]): List[Int] = l.foldLeft(List[Int]())((h,c)=> c :: h)
+
+  def isPalindromN(l: List[Int]): Boolean = l.reverse == l
+
+  def flatten(l: List[Any]): List[Any] = l flatMap {
+    case ls: List[_] => flatten(ls)
+    case a => List(a)
+  }
+
+  def compress[A](l: List[A]):List[A] = l match {
+    case Nil => Nil
+    case h :: tail => h :: compress(tail.dropWhile(_ == h))
+  }
+
+  def compressTR[A](l: List[A]):List[A] = ???
+
+  def compressF[A](l: List[A]):List[A] = ???
+
+
+	
   
 }

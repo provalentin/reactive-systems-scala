@@ -54,4 +54,27 @@ import org.scalatest.junit.JUnitRunner
     assert(reverseTR(List(1, 1, 2, 3, 5, 8))==List(8, 5, 3, 2, 1, 1)) 
   } 
    
+  test("P05: Reverse list: Functional"){
+    assert(reverseF(List(1, 1, 2, 3, 5, 8))==List(8, 5, 3, 2, 1, 1))
+  }
+
+  test("P06: isPalindrom"){
+    assert(isPalindromN(List(1, 2, 3, 2, 1))==true)
+  }
+
+  test("P07: flatten list structure"){
+    assert(flatten(List(List(1, 1), 2, List(3, List(5, 8))))==List(1, 1, 2, 3, 5, 8))
+  }
+
+  test("P08: Eliminate consecutive duplicates of list elements: Recursive"){
+    assert(compress(List('a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e'))==List('a', 'b', 'c', 'a', 'd', 'e'))
+  }
+
+  test("P08: Eliminate consecutive duplicates of list elements: TailRec"){
+    assert(compressTR(List('a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e'))==List('a', 'b', 'c', 'a', 'd', 'e'))
+  }
+
+  test("P08: Eliminate consecutive duplicates of list elements: Functional "){
+    assert(compressF(List('a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e'))==List('a', 'b', 'c', 'a', 'd', 'e'))
+  }
 }
