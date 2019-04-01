@@ -131,6 +131,7 @@ object App {
   //Arithmetic part
   //Determine whether a given integer number is prime.
   def isPrime(n: Int): Boolean = ???
+  def isPrimeZip(n: Int): Boolean = ???
   //Determine the greatest commin divisor of two integer numbers
   def gcd(n: Int, m: Int): Int = ???
   //Determine whether two positive integer numbers are coprime.
@@ -139,4 +140,8 @@ object App {
   def primeFactors(n: Int): List[Int] = ???
   def primeFactorsMultiple(n: Int): List[List[Int]] = ???
   def primeFactorsMap(n: Int): Map[Int, Int] = ???
+  //A list of prime numbers.
+  def listPrimesInRange(n: Int, m: Int): List[Int] = ???
+  //Huffman code
+  def huffman(ls: List[(String, Int)]) : List[(String, Int)] = ???
 }

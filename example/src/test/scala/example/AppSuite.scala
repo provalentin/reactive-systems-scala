@@ -173,6 +173,10 @@ import org.scalatest.junit.JUnitRunner
     //assert( 7.isPrime == true ) //should be this way
     assert( isPrime(7) === true )
   }
+   test("P31: Zip method Determine whether a given integer number is prime."){
+     //assert( 7.isPrime == true ) //should be this way
+     assert( isPrimeZip(7) === true )
+   }
    //Determine the greatest common divisor of two positive integer numbers.
   test("P32: Determine the greatest common divisor of two positive integer numbers."){
     assert( gcd(36, 63) == 9)
@@ -190,5 +194,15 @@ import org.scalatest.junit.JUnitRunner
   }
   test("P35: Map:  Determine the prime factors of a given positive integer."){
    assert(primeFactorsMap(315) == Map(3 -> 2, 5 -> 1, 7 -> 1))
+  }
+  //A list of prime numbers.
+  test("P39: A list of prime numbers."){
+    assert(listPrimesInRange(7, 31) == List(7, 11, 13, 17, 19, 23, 29, 31))
+  }
+
+   //CODES PART
+   //Huffman code
+  test("P50: Huffman code"){
+    assert(huffman(List(("a", 45), ("b", 13), ("c", 12), ("d", 16), ("e", 9), ("f", 5))) == List(("a",0), ("b",101), ("c",100), ("d",111), ("e",1101), ("f",1100)))
   }
 }
