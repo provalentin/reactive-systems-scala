@@ -130,8 +130,20 @@ object App {
 
   //Arithmetic part
   //Determine whether a given integer number is prime.
-  def isPrime(n: Int): Boolean = ???
+  def isPrime(n: Int): Boolean = {
+    (2 to n-1).forall(k => n % k != 0)
+  }
+  def isPrimeF(n: Int): Boolean = {
+    (2 to n-1).foldLeft(true)((x,y) => x && (n % y != 0))
+  }
   def isPrimeZip(n: Int): Boolean = ???
+  def primeStream(stream: Stream[Int] = Stream.from(3, 2)): Stream[Int] = {
+    stream.head #:: primeStream(stream.tail.filter(_ % stream.head != 0))
+  }
+  //primes stream generator
+  def primes(): Stream[Int] = 2 #:: Stream.from(3).filter { n => !primes.takeWhile(_ <= math.sqrt(n)).exists(n % _ == 0) }
+  //is prime check based on stream of primes
+  def isPrimeS(n: Int) = primes.dropWhile(_ < n).head == n
   //Determine the greatest commin divisor of two integer numbers
   def gcd(n: Int, m: Int): Int = ???
   //Determine whether two positive integer numbers are coprime.

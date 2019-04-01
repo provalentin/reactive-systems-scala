@@ -173,10 +173,14 @@ import org.scalatest.junit.JUnitRunner
     //assert( 7.isPrime == true ) //should be this way
     assert( isPrime(7) === true )
   }
-   test("P31: Zip method Determine whether a given integer number is prime."){
-     //assert( 7.isPrime == true ) //should be this way
-     assert( isPrimeZip(7) === true )
-   }
+  test("P31: Functional: Determine whether a given integer number is prime."){
+   //assert( 7.isPrime == true ) //should be this way
+   assert( isPrimeF(7) === true )
+  }
+  test("P31: Zip method Determine whether a given integer number is prime."){
+   //assert( 7.isPrime == true ) //should be this way
+   assert( isPrimeZip(7) === true )
+  }
    //Determine the greatest common divisor of two positive integer numbers.
   test("P32: Determine the greatest common divisor of two positive integer numbers."){
     assert( gcd(36, 63) == 9)
