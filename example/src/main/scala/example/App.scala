@@ -145,7 +145,7 @@ object App {
   //is prime check based on stream of primes
   def isPrimeS(n: Int) = primes.dropWhile(_ < n).head == n
   //Determine the greatest commin divisor of two integer numbers
-  def gcd(n: Int, m: Int): Int = ???
+  def gcd(n: Int, m: Int): Int = if (m==0) n else gcd(m, n % m)
   //Determine whether two positive integer numbers are coprime.
   def coprime(n: Int, m: Int): Int = ???
   //Determine the prime factors of a given positive integer.
