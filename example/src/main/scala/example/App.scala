@@ -88,8 +88,55 @@ object App {
       if (r.isEmpty || r.head != h) h :: r
       else r
     }
-
-
-	
   
+  def pack[A](ls: List[A]):List[List[A]] = ???
+  //Run-length encoding of a list.
+  def encode[A](ls: List[A]):List[Any] = ???
+  //Modified run-length encoding.
+  def encodeModified[A](ls: List[A]): List[Any] = ???
+  //Decode a run-length encoded list
+  def decode[A](ls: List[Any]):List[A] = ???
+  //Run-length encoding of a list. Direct solution
+  def encodeDirect[A](ls: List[A]):List[Any] = ???
+	//Duplicate the elements of a list
+  def duplicate[A](ls: List[A]): List[A] = ???
+  //Duplicate the elements of a list N times
+  def duplicateN[A](n: Int, ls: List[A]): List[A] = ???
+  //Drop N-th elements of a list
+  def drop[A](n: Int, ls: List[A]): List[A] = ???
+  //Slit list into two parts
+  def split[A](n: Int, ls: List[A]): (List[A], List[A]) = ???
+  //Extract slice from a list
+  def slice[A](n: Int, k: Int, ls: List[A]): List[A] = ???
+  //Rotate list N places to left
+  def rotate[A](n: Int, ls: List[A]): List[A] = ???
+  // Remove the Kth element from a list.
+  def removeAt[A](n: Int, ls: List[A]): (List[A], A) = ???
+  // Insert an element at a given position into a list.
+  def insertAt[A](el: A, n: Int, ls: List[A]): List[A] = ???
+  //Create a list containing all integers within a given range.
+  def range(a: Int, b: Int): List[Int] = ???
+  // Extract a given number of randomly selected elements from a list.
+  def randomSelect[A](n: Int, ls: List[A]): List[A] = ???
+  //Lotto: Draw N different random numbers from the set 1..M.
+  def lotto(n: Int, m: Int): List[Int] = ???
+  //Generate the combinations of K distinct objects chosen from the N elements of a list.
+  def combinations[A](n: Int, ls: List[A]): List[List[A]] = ???
+  //Group the elements of a set into disjoint subsets.
+  def group3[A](ls: List[A]):List[List[List[A]]] = ???
+  // Sorting a list of lists according to length of sublists.
+  def lsort[A](ls: List[List[A]]): List[List[A]] = ???
+
+
+  //Arithmetic part
+  //Determine whether a given integer number is prime.
+  def isPrime(n: Int): Boolean = ???
+  //Determine the greatest commin divisor of two integer numbers
+  def gcd(n: Int, m: Int): Int = ???
+  //Determine whether two positive integer numbers are coprime.
+  def coprime(n: Int, m: Int): Int = ???
+  //Determine the prime factors of a given positive integer.
+  def primeFactors(n: Int): List[Int] = ???
+  def primeFactorsMultiple(n: Int): List[List[Int]] = ???
+  def primeFactorsMap(n: Int): Map[Int, Int] = ???
 }
